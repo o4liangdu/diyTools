@@ -1,0 +1,13 @@
+<!--pages/deployFunctions/deployFunctions.wxml-->
+<view class="stageContainer">
+  <view class="price">
+    
+  </view>
+  <view class="stage">
+    
+  </view>
+  <view class="saveAmount">
+    
+  </view>
+</view>
+

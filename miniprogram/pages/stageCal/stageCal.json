@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "看看分期能优惠多少",
+  "usingComponents": {
+    "van-field": "@vant/weapp/field/index"
+  }
+}
