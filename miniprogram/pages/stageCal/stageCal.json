@@ -1,6 +1,11 @@
 {
   "navigationBarTitleText": "看看分期能优惠多少",
   "usingComponents": {
-    "van-field": "@vant/weapp/field/index"
+    "van-field": "vant-weapp/field/index",
+    "van-cell-group": "vant-weapp/cell-group/index",
+    "van-picker": "vant-weapp/picker/index",
+    "van-toast": "vant-weapp/toast/index",
+    "van-action-sheet": "vant-weapp/action-sheet/index",
+    "van-icon": "vant-weapp/icon/index"
   }
 }

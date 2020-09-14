@@ -1,13 +1,36 @@
 <!--pages/deployFunctions/deployFunctions.wxml-->
 <view class="stageContainer">
-  <view class="price">
-    
-  </view>
-  <view class="stage">
-    
-  </view>
-  <view class="saveAmount">
-    
-  </view>
-</view>
+	<view class="price">
+		<van-cell-group>
+			<van-field required clearable value="{{ price }}" bind:change="onChangePrice" placeholder="请输入分期产品总价（元）" border="{{ true }}" label="产品总价：" title-width="8.2em" />
+		</van-cell-group>
+	</view>
+	<view class="stage">
+		<van-field id="stagePicker" required value="{{ stageVal }}期免息" bind:focus="onChangeStage" border="{{ true }}" label="免息期数：" title-width="8.2em" right-icon="arrow" />
+		<van-action-sheet show="{{ showAct }}" actions="{{ options }}" bind:close="onClose" bind:select="onSelect" />
+	</view>
+	<view class="incomeRate">
+		<van-cell-group>
+			<van-field required clearable value="{{ incomeRate }}" bind:change="onChangeRate" placeholder="请输入预期投资年化收益（%）" border="{{ true }}" label="预期年化收益：" title-width="8.2em" />
+		</van-cell-group>
+	</view>
+	<view class="btnGroup">
+		<van-button class="resetBtn" bind:click="reset" color="#e6e48e">
+			重置
+		</van-button>
+		<van-button class="confirmBtn" :loading="isCal" loading-type="spinner" loading-text="计算中..." bind:click="confirm" :disabled="isDisabled" color="#8ecde6">
+			确认
+		</van-button>
+	</view>
+	<!-- 轻提示 -->
+	<van-toast id="van-toast" />
+	<view class="output">
+		<text class="result" wx:if="{{showsRes}}">
+      使用{{stageVal}}期免息购买总价{{price}}元的商品，如按年化{{incomeRate}}%的利息计算，预计可省{{res}}元。
+    </text>
+		<text class="notice" wx:if="{{showsRes}}">
+      说明：此计算结果仅供参考，具体节省多少以理财实际为准！
+    </text>
+	</view>
 
+</view>

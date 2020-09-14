@@ -1,9 +1,12 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/index/index",
+    "pages/stageCal/stageCal"
   ],
   "usingComponents": {
-    "van-button": "miniprogram_npm/vant-weapp/button/index"
+    "van-button": "miniprogram_npm/vant-weapp/button/index",
+    "van-toast": "miniprogram_npm/vant-weapp/toast/index",
+    "van-loading": "miniprogram_npm/vant-weapp/loading/index"
   },
   "window": {
     "backgroundColor": "#F6F6F6",
