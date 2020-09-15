@@ -1,0 +1,15 @@
+<!--pages/map/map.wxml-->
+<view><van-search value="{{ locvalue }}" placeholder="请输入你想去的地方" use-action-slot bind:change="onContentChange">
+    <view slot="action" bind:tap="onSearch">搜索</view>
+  </van-search></view>
+
+  <contact-button 
+  type="default-dark" 
+  size="20"
+  session-from="weapp"
+>
+</contact-button>
+
+<map id="myMap" longitude="{{ log }}" latitude="{{ lat }}" scale='18' subkey="CJGBZ-2CWLP-IXLDU-V7YLX-DS7P7-W4F6X" 
+polyline='{{polyline}}' markers="{{markers}}" show-location
+></map>

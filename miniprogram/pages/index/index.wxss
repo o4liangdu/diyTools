@@ -77,6 +77,9 @@ page {
   font-weight: 400;
   font-size: 44rpx;
 }
+.toolContainer .row .column .weather{
+  height: 250rpx;
+}
 .toolContainer .row .column:active {
   background-color: rgba(233, 203, 185, 0.651);
 }

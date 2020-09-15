@@ -1,0 +1,20 @@
+<view class="movie" wx:for="{{movieList}}" wx:key="{{index}}" bindtap='getp'>
+<image bindtap='gotoComment' data-movieid="{{item.id}}" class="movie-img" src='{{item.images.small}}'></image>
+<view bindtap='gotoComment' data-movieid="{{item.id}}" class='movie-info' >
+  <view class='movie-title' bindtap='gotoComment' data-movieid="{{item.id}}">
+    {{item.title}}
+  </view>
+  <view bindtap='gotoComment' data-movieid="{{item.id}}">
+    观众评分：<text class='movie-score'>{{item.rating.average}}</text>分
+  </view>
+  <view bindtap='gotoComment' data-movieid="{{item.id}}">
+    导演：{{item.directors[0].name}}
+  </view>
+  <view bindtap='gotoComment' data-movieid="{{item.id}}">主演：
+    <text wx:for="{{item.casts}}" wx:key="{{index}}">{{item.name}}；</text>
+  </view>
+  <view bindtap='gotoComment' data-movieid="{{item.id}}">
+    年份：{{item.year}}
+  </view>
+</view>
+</view>

@@ -24,10 +24,21 @@
 					分期计算
 				</navigator>
 			</view>
-			<view class="stageCal column">
+			<view class="cal column">
 				<!-- 计算器 -->
 				<navigator url="../cal/cal" open-type="navigate" class="">
 					计算器
+				</navigator>
+			</view>
+		</view>
+		<view class="row">
+			<view class="weather column">
+				<!-- 天气 -->
+				<navigator url="../cal/cal" open-type="navigate" class="">
+					<text>{{city}}天气</text>
+					<view class="weatherInfo">
+						
+					</view>
 				</navigator>
 			</view>
 		</view>
